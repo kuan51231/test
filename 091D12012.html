@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title><!--RWD（Responsive Web Design）中文翻作「響應式網站設計」，是一種為了讓網頁在各種尺寸的裝置下，畫面都能呈現合適比例的設計原則。-->
+<meta charset="UTF-8"><!--<meta> charset 用來指定網頁內容是用什麼編碼 (character set)，現在大多數的網頁編碼都是 UTF-8，可是網頁呈現中文文字，如果沒使用正確編碼，會使網頁呈現亂碼-->
+<meta name="viewport" content="width=device-width, initial-scale=1"><!--viewport（檢視區）指的就是瀏覽網頁時瀏覽器顯示畫面內容的區域。-->
+<!--通過設置 viewport ，可以控制螢幕的寬度和縮放比例，width=device-width 指定瀏覽器頁面的寬度同裝置 (device) 的寬度，
+initial-scale=1.0 指定畫面初始縮放比例為 100%，即不放大也不縮小-->
+<!--CSS主要的用途是對網頁中字體、顏色、背景、圖像及其他各種元素的控制，使網頁能夠完全按照設計者的要求來顯示-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"><!--外部連結，定義樣式，透過CDN（Content Delivery Network）網際網路上的伺服器，取得網址連結，就可以接通-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><!--外部連結，定義樣式，font定義了該內容的字體大小、顏色與表現-->
+<!--font-family的意思為「字型型別、設定字型系列」，是用來規定元素的字型系列的屬性，可以指定一個元素的字型；該屬性可以把多個字型名稱作為一個「回退」系統來儲存，如果瀏覽器不支援第一個字型，則會嘗試下一個-->
+<!--"sans-serif"為通常字體系列之一-->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey"><!--Color類，色類定義的元素的顏色。-->
+
+<div class="w3-content" style="max-width:1400px"><!--w3-content 定義了一個固定大小居中內容的容器，並環繞整個頁面內容。-->
+<!--max-width 表示是最大寬度，當內容料太多，撐開區塊且讓區塊超過寬度時，該區塊的寬度會被限制在這個 max-width 設定的寬度內-->
+
+<!-- Header -->
+<!--Container 為wordpress中最基本的，可以來排版用的元素，且能夠跟隨螢幕大小而變化,毋須再另行設定，區塊裡的樣式依container裡的設定而改變-->
+<header class="w3-container w3-center w3-padding-32"> <!--center為置中，padding為定義元素邊框與元素內容之間的空間，及上下左右的內邊距-->
+  <h1><b>MY BLOG</b></h1><!--依上面設定樣式顯示文字-->
+ <!--<span>元素是行內元素(一個邊框)，沒有任何特殊語義，可以使用它來編組元素達到某種樣式-->
+  <p>Welcome to the blog of <span class="w3-tag">unknown</span></p> <!--依span邊框設定將文字(unknown)包覆在其內-->
+</header>
+
+<!-- Grid -->
+<!--grid system ，中文名稱gridsystem，是一個非常實用的排版系統，這並不是bootstrap特有的，
+在css裏亦常見，它把螢幕分成12等分，當你需要調整項目佔的位置，只需要說明該項目需要占多少直行就可以了。-->
+<div class="w3-row"><!--<div class="row">: 這個每次需要用grid system都必須要加添的-->
+
+<!-- Blog entries -->
+<div class="w3-col 18 s12"><!--依設定改變排版樣式(內置響應式)-->
+  <!-- Blog entry -->
+  <!--W3.CSS中的card有幾個特殊的類別，有助將容器顯示為紙張，如帶有影子的card-->
+  <!--CSS margin 屬性用來定義一個區域（例如 DIV 或 span）的外邊界距離，俗稱外距，與常用的 padding（內距）剛好不同。
+  margin 可以讓你一次設定四個邊的外距，也可以分別設定每個邊不同的外距，特別的是 margin 可以設定負値。-->
+  <div class="w3-card-4 w3-margin w3-white"><!--"w3-card-4"為具有4px邊框陰影的任何HTML內容設置器，margin為外距，white為card的顏色樣式-->
+    <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"><!--圖片路徑為外部圖片，alt可為替換圖片無法顯示的設定(此替換設定為大自然圖片)，style為設定寬度縮放-->
+    <div class="w3-container"><!--排版元素定義-->
+      <h3><b>TITLE HEADING</b></h3><!--<b>為字體放大-->
+      <!--opacity屬性指定一個元素的不透明度，換而言之，opacity屬性指定了一個元素後面的背景被覆蓋程度。-->
+      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5><!--April 7, 2014被定義為半透明顯示-->
+    </div>
+
+    <div class="w3-container"><!--排版元素定義-->
+      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
+        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <div class="w3-row"><!--<div class="row">: 這個每次需要用grid system都必須要加添的-->
+        <div class="w3-col m8 s12"><!--依設定改變排版樣式(內置響應式)-->
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p><!--設定按鈕樣式：內邊距、顏色以及邊框-->
+        </div>
+        <div class="w3-col m4 w3-hide-small"><!--w3-hide-small為在小屏幕(小於601px)上隱藏內容-->
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p><!--定義Comments內邊距及位置、定義tag裡的文字顯示-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white"><!--"w3-card-4"為具有4px邊框陰影的任何HTML內容設置器，margin為外距，white為card的顏色樣式-->
+  <img src="/w3images/bridge.jpg" alt="Norway" style="width:100%"><!--圖片路徑為外部圖片，alt可為替換圖片無法顯示的設定(此替換設定為挪威圖片)，style為設定寬度縮放-->
+    <div class="w3-container"><!--排版元素定義-->
+      <h3><b>BLOG ENTRY</b></h3><!--<b>為字體放大-->
+      <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5><!--April 7, 2014被定義為半透明顯示-->
+    </div>
+
+    <div class="w3-container"><!--排版元素定義-->
+      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
+        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <div class="w3-row"><!--<div class="row">: 這個每次需要用grid system都必須要加添的-->
+        <div class="w3-col m8 s12"><!--依設定改變排版樣式(內置響應式)-->
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p><!--設定按鈕樣式：內邊距、顏色以及邊框-->
+        </div>
+        <div class="w3-col m4 w3-hide-small"><!--w3-hide-small為在小屏幕(小於601px)上隱藏內容-->
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p><!--定義Comments內邊距及位置、定義badge裡的文字顯示-->
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4"><!--依設定改變排版樣式(內置響應式)-->
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top"><!--"w3-card為具有框陰影的任何HTML內容設置器，margin為外距，margin-top屬性用來設置元素的頂部外邊距-->
+  <img src="/w3images/avatar_g.jpg" style="width:100%"><!--圖片路徑為外部圖片，style為設定寬度縮放-->
+    <div class="w3-container w3-white"><!--排版元素定義-->
+      <h4><b>My Name</b></h4><!--<b>為字體放大-->
+      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin"><!--"w3-card為具有框陰影的任何HTML內容設置器，margin為外距-->
+    <div class="w3-container w3-padding"><!--排版元素定義、內邊距設定-->
+      <h4>Popular Posts</h4>
+    </div>
+    <!--Hoverable鏈接. 當鼠標移到導航條中的鏈接，背景顏色將變為灰色。-->
+    <ul class="w3-ul w3-hoverable w3-white"><!--依設定顯示區塊，hoverable為當鼠標移到導航條中的鏈接，背景顏色將變為灰色、white為顏色樣式-->
+      <li class="w3-padding-16"><!--設定內邊距-->
+        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <!--圖片路徑為外部圖片，alt可為替換圖片無法顯示的設定(此替換設定為圖像圖片)、區域及外邊距設定、style為設定寬度縮放-->
+        <span class="w3-large">Lorem</span><br> <!--依span邊框設定將文字(unknown)包覆在其內-->
+        <span>Sed mattis nunc</span> <!--依span邊框設定將文字(unknown)包覆在其內-->
+      </li>
+      <li class="w3-padding-16"><!--設定內邊距-->
+        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <!--圖片路徑為外部圖片，alt可為替換圖片無法顯示的設定(此替換設定為圖像圖片)、區域及外邊距設定、style為設定寬度縮放-->
+        <span class="w3-large">Ipsum</span><br> <!--依span邊框設定將文字(unknown)包覆在其內-->
+        <span>Praes tinci sed</span> <!--依span邊框設定將文字(unknown)包覆在其內-->
+      </li> 
+      <li class="w3-padding-16"><!--設定內邊距-->
+        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <!--圖片路徑為外部圖片，alt可為替換圖片無法顯示的設定(此替換設定為圖像圖片)、區域及外邊距設定、style為設定寬度縮放-->
+        <span class="w3-large">Dorum</span><br><!--依span邊框設定將文字(unknown)包覆在其內-->
+        <span>Ultricies congue</span><!--依span邊框設定將文字(unknown)包覆在其內-->
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small"><!--設定內邊距、w3-hide-medium為在中等屏幕上隱藏內容、w3-hide-small為在小屏幕(小於601px)上隱藏內容-->
+        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <!--圖片路徑為外部圖片，alt可為替換圖片無法顯示的設定(此替換設定為圖像圖片)、區域及外邊距設定、style為設定寬度縮放-->
+        <span class="w3-large">Mingsum</span><br><!--依span邊框設定將文字(unknown)包覆在其內-->
+        <span>Lorem ipsum dipsum</span><!--依span邊框設定將文字(unknown)包覆在其內-->
+      </li>  
+    </ul>
+  </div>
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin"><!--"w3-card為具有框陰影的任何HTML內容設置器，margin為外距-->
+    <div class="w3-container w3-padding"><!--設定內邊距-->
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white"><!--排版元素定義-->
+    <!--依span邊框設定將文字(unknown)包覆在其內，下列皆為定義span的樣式：顏色、內邊距-->
+    <p><span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span><!--皆依span邊框設定將文字(unknown)包覆在其內-->
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span><!--皆依span邊框設定將文字(unknown)包覆在其內-->
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span><!--皆依span邊框設定將文字(unknown)包覆在其內-->
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span><!--皆依span邊框設定將文字(unknown)包覆在其內-->
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span><!--皆依span邊框設定將文字(unknown)包覆在其內-->
+    </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<!--<footer> 標籤定義 section 或 document 的頁尾，在典型情況下，該元素會包含創作者的姓名、文檔的創作日期以及/或者聯絡資訊，而在一個文檔中，可以定義多個 <footer> 元素-->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top"><!--設定顏色、內邊距、margin-top屬性用來設置元素的頂部外邊距-->
+<!--disabled 屬性規定應該禁用input元素，被禁用的input元素既不可用也無法點擊-->
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button><!--設定顏色、禁用input元素、內邊距、外邊距-->
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button><!--設定顏色、內邊距、margin-bottom為設置元素的下外邊距-->
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p><!--連接外部連結(點擊w3.css)-->
+</footer>
+
+</body>
+</html>
